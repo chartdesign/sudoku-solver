@@ -115,18 +115,21 @@ const SudokuSolver = () => {
 
   return (
     <div className='max-w-lg'>
-      <button
-        className='ml-4 border rounded-lg m-2 p-2 bg-slate-400 text-white'
-        onClick={handleSolveClick}
-      >
-        Solve Sudoku
-      </button>
-      <button
-        className='ml-4 border rounded-lg m-2 p-2 bg-slate-400 text-white'
-        onClick={handleClearClick}
-      >
-        Clear
-      </button>
+      <div className='m-auto'>
+        <button
+          className='ml-4 border rounded-lg m-2 p-2 bg-slate-400 text-white '
+          onClick={handleSolveClick}
+        >
+          Solve Sudoku
+        </button>
+        <button
+          className='ml-4 border rounded-lg m-2 p-2 bg-slate-400 text-white '
+          onClick={handleClearClick}
+        >
+          Clear
+        </button>
+      </div>
+
       <div
         style={{
           display: "grid",
@@ -145,7 +148,7 @@ const SudokuSolver = () => {
               onChange={(e) =>
                 handleInputChange(rowIndex, colIndex, e.target.value)
               }
-              className='border p-2 text-center rounded-xl'
+              className='border p-2 text-center rounded-xl '
             />
           ))
         )}
